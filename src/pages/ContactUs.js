@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
+
 function ContactUs() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-start p-0">

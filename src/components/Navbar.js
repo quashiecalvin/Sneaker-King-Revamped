@@ -83,7 +83,7 @@ function Navbar() {
             <Link to="/" className="hover:text-gray-300">Home</Link>
           </li>
           <li>
-            <Link to="/products" className="hover:text-gray-300">Products</Link>
+            <Link to="/products" className="hover:text-gray-300">COllection</Link>
           </li>
           <li>
             <Link to="/about" className="hover:text-gray-300">About</Link>

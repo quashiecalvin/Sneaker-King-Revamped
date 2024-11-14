@@ -12,7 +12,7 @@ function About() {
         muted
       />
 
-      {/* Overlay for better text visibility */}
+    
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
       {/* Content */}

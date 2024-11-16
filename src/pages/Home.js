@@ -5,7 +5,7 @@ function Home() {
   return (
     <div
       className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center antialiased font-sans"
-      style={{ backgroundImage: "url('https://wallpapers.com/images/featured/sneaker-x499s7jambwdigab.jpg')" }}
+      style={{ backgroundImage: "url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/2a2e99205690657.66d5846942b5d.jpg')" }}
     >
       {/* Semi-transparent overlay */}
       <div className="absolute inset-0 bg-black opacity-40"></div>

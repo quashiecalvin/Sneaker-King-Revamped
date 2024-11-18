@@ -41,7 +41,7 @@ function Checkout() {
 
   const componentProps = {
     email: 'sneakerking@gmail.com', 
-    amount: calculateTotal() * 100 * 16.05, // Amount in kobo (Paystack works with kobo)
+    amount: calculateTotal() * 100 * 16.03, // Amount in kobo (Paystack works with kobo)
     currency: 'GHS',
     publicKey: publicKey,
     text: 'Pay Now',

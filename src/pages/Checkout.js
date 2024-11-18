@@ -40,7 +40,7 @@ function Checkout() {
   };
 
   const componentProps = {
-    email: 'sneakerking@gmail.com', // You can replace this with dynamic email input from your form
+    email: 'sneakerking@gmail.com', 
     amount: calculateTotal() * 100 * 16.05, // Amount in kobo (Paystack works with kobo)
     currency: 'GHS',
     publicKey: publicKey,

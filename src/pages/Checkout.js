@@ -7,6 +7,7 @@ import { PaystackButton } from 'react-paystack';
 function Checkout() {
   const { cart, clearCart } = useCart();
   const [name, setName] = useState('');
+  const [email, setEmail] =  useState('');
   const [address, setAddress] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('credit');
   const [orderSubmitted, setOrderSubmitted] = useState(false);
@@ -22,9 +23,9 @@ function Checkout() {
 
   // Update form validity whenever fields change
   useEffect(() => {
-    const isValid = name.trim() !== '' && address.trim() !== '' && cart.length > 0;
+    const isValid = name.trim() !== '' && email.trim() !== '' && address.trim() !== '' && cart.length > 0;
     setIsFormValid(isValid);
-  }, [name, address, cart]);
+  }, [name, email,  address, cart]);
 
   // Handle Paystack payment success
   const handlePaymentSuccess = (reference) => {
@@ -40,7 +41,7 @@ function Checkout() {
   };
 
   const componentProps = {
-    email: 'sneakerking@gmail.com', 
+    email: email, 
     amount: calculateTotal() * 100 * 16.03, // Amount in kobo (Paystack works with kobo)
     currency: 'GHS',
     publicKey: publicKey,
@@ -53,7 +54,7 @@ function Checkout() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Order submitted:', { name, address, paymentMethod, cart });
+    console.log('Order submitted:', { name, email, address, paymentMethod, cart });
   };
 
   if (cart.length === 0) {
@@ -83,6 +84,17 @@ function Checkout() {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              className="border border-gray-300 p-2 rounded-lg"
+              required
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="email" className="font-semibold mb-2">Email:</label>
+            <input
+              type="text"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="border border-gray-300 p-2 rounded-lg"
               required
             />
